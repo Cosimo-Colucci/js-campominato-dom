@@ -65,13 +65,13 @@ button.addEventListener (("click"), function(){
         cell.addEventListener (("click"), function(){
         console.log(i + 1);
         cell.classList.toggle("active");
-
-        sectionGame.appendChild (cell)
-    });
-
     
-
+        sectionGame.appendChild (cell)
+        }
+    )};
 });
+
+
 
 
 /**
