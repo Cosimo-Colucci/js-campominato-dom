@@ -59,19 +59,30 @@ button.addEventListener (("click"), function(){
     for (let i = 0; i < 100; i++){
 
      //inseriamo la funzione creata allinterno di section.game
-        sectionGame.appendChild (creatNewCell ())
+        
+        let cell = createNewCell();
 
-    let cell = document.querySelector("div.cell");
+        cell.addEventListener (("click"), function(){
+        console.log(i + 1);
+        cell.classList.toggle("active");
+
+        sectionGame.appendChild (cell)
+    });
+
+    
+
+});
+
+
+/**
+ * sectionGame.appendChild (creatNewCell ())
+        let cell = createNewCell();
 
         cell.addEventListener (("click"), function(){
             console.log(i + 1);
         cell.classList.toggle("active");
         });
-
+        
+        sectionGame.appendChild (cell)
     };
-
-
-
-});
-
-
+ */
