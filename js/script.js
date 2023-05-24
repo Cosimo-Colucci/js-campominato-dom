@@ -60,15 +60,18 @@ button.addEventListener (("click"), function(){
 
      //inseriamo la funzione creata allinterno di section.game
         sectionGame.appendChild (creatNewCell ())
+
+    let cell = document.querySelector("div.cell");
+
+        cell.addEventListener (("click"), function(){
+            console.log(i + 1);
+        cell.classList.toggle("active");
+        });
+
     };
 
 
-    const realCell = document.querySelector("div.cell");
 
-    realCell.addEventListener('click', function(){
-        console.log(i + 1);
-        realCell.classList.toggle("active");
-    });
 });
 
 
