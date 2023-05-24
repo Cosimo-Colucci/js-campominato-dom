@@ -14,37 +14,45 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
  */
 //funcions
+// dichiariamo una funzione nenza oggetti
 function creatNewCell () {
+    //creamo un elemento div nel documento nominandolo
     const cellElement = document.createElement ("div");
+    //attribuiamo allo stesso div una classe di riferimento
     cellElement.className = "cell";
+    //diciamo al programma cosa restituire
     return cellElement;
 }
 
 
 
-
+//sezioniamo la section.game
 const sectionGame = document.querySelector("section.game");
+//selezioniamo il bottone
 const button = document.querySelector("button");
 
+//aggiungiamo un evento nel bottone selezionato
 button.addEventListener (("click"), function(){
 
+    //diciamo al subito di svuotare la section.game per non avere una sovrapposizione degli elementi
     sectionGame.innerHTML = "";
 
-    const gridElement = document.querySelector ("section.game");
+    //const gridElement = document.querySelector ("div.cell");
     
-
+    //inizio un ciclo che mi inserisca un numero stabilito di div
     for (let i = 0; i < 100; i++){
-        const realCell = creatNewCell ();
 
-        realCell.addEventListener('click', function(){
-            console.log(i + 1);
-            realCell.classList.toggle("active");
-        });
-
-
-        gridElement.appendChild (creatNewCell ())
+     //inseriamo la funzione creata allinterno di section.game
+        sectionGame.appendChild (creatNewCell ())
     };
 
+
+    const realCell = document.querySelector("div.cell");
+
+    realCell.addEventListener('click', function(){
+        console.log(i + 1);
+        realCell.classList.toggle("active");
+    });
 });
 
 
