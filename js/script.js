@@ -31,7 +31,7 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 //funcions
 // dichiariamo una funzione nenza oggetti
-function creatNewCell () {
+function createNewCell () {
     //creamo un elemento div nel documento nominandolo
     const cellElement = document.createElement ("div");
     //attribuiamo allo stesso div una classe di riferimento
