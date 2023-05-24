@@ -144,3 +144,14 @@ button.addEventListener (("click"), function(){
         htmlElement.innerHTML = htmlContent;
         return htmlElement;
     }
+
+    function getRandomNumber (minNum, maxNum, elements) {
+        const numberList = [];
+
+        while (numberList.length < elements) {
+
+            if ( !numbersList.includes ())
+        };
+
+        return numberList;
+    }
